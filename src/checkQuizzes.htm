@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Liste des quiz</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="./quizzes.js"></script>
+    <script
+      type="text/javascript"
+      src="./resources/includes/js/jQuery.js"
+    ></script>
+    <style>
+      body {
+        font-size: 1em;
+        margin-top: 232px;
+        font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode,
+          Lucida Sans, Tahoma, sans-serif;
+      }
+
+      .true {
+        color: blue;
+        font-weight: bold;
+      }
+
+      .false {
+        color: red;
+        font-weight: bold;
+      }
+
+      .content {
+        width: auto;
+        text-align: justify;
+        border: none;
+        padding: 5px;
+        margin-bottom: 10px;
+        border-radius: 10px 10px 10px 10px;
+      }
+      #context {
+        background-color: #aaa;
+        color: #f5f5f5;
+        position: fixed;
+        font-size: 3.8vh;
+        top: 0px;
+        left: 8px;
+        width: calc(100% - 28px);
+        height: 200px;
+        border-bottom: none;
+        border-radius: 5px 5px 5px 5px;
+        padding: 5px;
+      }
+
+      .separator {
+        width: auto;
+        height: 10px;
+        background-color: #bfbfbf;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border: none;
+        border-radius: 5px 5px 5px 5px;
+      }
+
+      .resp_pat {
+        background-color: #a6f7df;
+      }
+
+      .resp_pract {
+        background-color: #88d2f5;
+      }
+    </style>
+    <script>
+      /*
+       ** $_GET(param): function that does the same as $_GET['param'] in PHP
+       */
+      function $_GET(param) {
+        var vars = {};
+
+        window.location.href
+          .replace(location.hash, "")
+          .replace(/[?&]+([^=&]+)=?([^&]*)?/gi, function(m, key, value) {
+            vars[key] = value !== undefined ? value : "";
+          });
+
+        if (param) {
+          return vars[param] ? vars[param] : null;
+        }
+      }
+
+      function loadQuiz(pIndex) {
+        var pEls = null;
+
+        /*
+         ** Check if $_GET['n'] is valid, if not, its value is 0
+         */
+        if (
+          isNaN(pIndex) ||
+          (pIndex < 0 || pIndex >= Object.keys(quizzes).length)
+        ) {
+          pIndex = 0;
+        }
+
+        /*
+         ** Show question:
+         */
+        $("#context").text(
+          "[question " + pIndex + "] -- " + quizzes[pIndex]["context"] + " "
+        );
+        $("#context").append(
+          $('<a href="?n=' + (parseInt(pIndex) + 1) + '">').append(
+            "[-->Goto:_question_" + (parseInt(pIndex) + 1) + "]"
+          )
+        );
+
+        /*
+         ** Show responses and explanations:
+         */
+        for (var key in quizzes[pIndex]["responses"]) {
+          pEls = $("p", $("#" + key));
+
+          $(pEls.get(0)).append(
+            " " +
+              (quizzes[pIndex]["responses"][key]["value"]
+                ? '<span class="true">OUI</span>'
+                : '<span class="false">NON</span>')
+          );
+
+          $(pEls.get(1)).append(
+            " " +
+              quizzes[pIndex]["responses"][key]["explanation"].replace(
+                /\n/g,
+                "<br />"
+              )
+          );
+        }
+      }
+
+      $(function() {
+        loadQuiz($_GET("n") || 0);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="context" class="conten">coucou</div>
+    <div class="separator"></div>
+    <img src="./resources/images/icon_patient.png" class="icon" />
+    <div class="separator"></div>
+    <div id="patient_MCQ_SHA" class="resp_pat content">
+      <h3>Patient-> [SHA]</h3>
+      <p><u>Valeur</u>:</p>
+      <p><u>Explication</u>:<br /><br /></p>
+    </div>
+    <div id="patient_MCQ_soap" class="resp_pat content">
+      <h3>Patient-> [SAVON]</h3>
+      <p><u>Valeur</u>:</p>
+      <p><u>Explication</u>:<br /><br /></p>
+    </div>
+    <div id="patient_MCQ_glove_vinyle" class="resp_pat content">
+      <h3>Patient-> [GANTS]</h3>
+      <p><u>Valeur</u>:</p>
+      <p><u>Explication</u>:<br /><br /></p>
+    </div>
+    <div id="patient_MCQ_surblouse_white" class="resp_pat content">
+      <h3>Patient-> [SURBLOUSE BLANCHE]</h3>
+      <p><u>Valeur</u>:</p>
+      <p><u>Explication</u>:<br /><br /></p>
+    </div>
+    <div id="patient_MCQ_surblouse_green" class="resp_pat content">
+      <h3>Patient-> [SURBLOUSE VERTE]</h3>
+      <p><u>Valeur</u>:</p>
+      <p><u>Explication</u>:<br /><br /></p>
+    </div>
+    <div id="patient_MCQ_standard_mask" class="resp_pat content">
+      <h3>Patient-> [MASQUE CHIRURGICAL]</h3>
+      <p><u>Valeur</u>:</p>
+      <p><u>Explication</u>:<br /><br /></p>
+    </div>
+    <div id="patient_MCQ_ffp1_mask" class="resp_pat content">
+      <h3>Patient-> [APR FFP1]</h3>
+      <p><u>Valeur</u>:</p>
+      <p><u>Explication</u>:<br /><br /></p>
+    </div>
+    <div id="patient_MCQ_ffp2_mask" class="resp_pat content">
+      <h3>Patient-> [APR FFP2]</h3>
+      <p><u>Valeur</u>:</p>
+      <p><u>Explication</u>:<br /><br /></p>
+    </div>
+    <div class="separator"></div>
+    <img src="./resources/images/icon_pract.png" class="icon" />
+    <div class="separator"></div>
+    <!-- pract -->
+    <div id="pract_MCQ_SHA" class="resp_pract content">
+      <h3>Pract-> [SHA]</h3>
+      <p><u>Valeur</u>:</p>
+      <p><u>Explication</u>:<br /><br /></p>
+    </div>
+    <div id="pract_MCQ_soap" class="resp_pract content">
+      <h3>Pract-> [SAVON NEUTRE]</h3>
+      <p><u>Valeur</u>:</p>
+      <p><u>Explication</u>:<br /><br /></p>
+    </div>
+    <div id="pract_MCQ_glove_vinyle" class="resp_pract content">
+      <h3>Pract-> [GANTS VINYLE]</h3>
+      <p><u>Valeur</u>:</p>
+      <p><u>Explication</u>:<br /><br /></p>
+    </div>
+    <div id="pract_MCQ_glove_latex_nitrile" class="resp_pract content">
+      <h3>Pract-> [GANTS LATEX / NITRILE]</h3>
+      <p><u>Valeur</u>:</p>
+      <p><u>Explication</u>:<br /><br /></p>
+    </div>
+    <div id="pract_MCQ_standard_mask" class="resp_pract content">
+      <h3>Pract-> [MASQUE CHIRURGICAL]</h3>
+      <p><u>Valeur</u>:</p>
+      <p><u>Explication</u>:<br /><br /></p>
+    </div>
+    <div id="pract_MCQ_ffp1_mask" class="resp_pract content">
+      <h3>Pract-> [APR FFP1]</h3>
+      <p><u>Valeur</u>:</p>
+      <p><u>Explication</u>:<br /><br /></p>
+    </div>
+    <div id="pract_MCQ_ffp2_mask" class="resp_pract content">
+      <h3>Pract-> [APR FFP2]</h3>
+      <p><u>Valeur</u>:</p>
+      <p><u>Explication</u>:<br /><br /></p>
+    </div>
+    <div id="pract_MCQ_protection_glasses" class="resp_pract content">
+      <h3>Pract-> [LUNETTES DE PROTECTION]</h3>
+      <p><u>Valeur</u>:</p>
+      <p><u>Explication</u>:<br /><br /></p>
+    </div>
+    <div id="pract_MCQ_apron" class="resp_pract content">
+      <h3>Pract-> [TABLIER DE PROTECTION]</h3>
+      <p><u>Valeur</u>:</p>
+      <p><u>Explication</u>:<br /><br /></p>
+    </div>
+    <div id="pract_MCQ_surblouse_green" class="resp_pract content">
+      <h3>Pract-> [SURBLOUSE]</h3>
+      <p><u>Valeur</u>:</p>
+      <p><u>Explication</u>:<br /><br /></p>
+    </div>
+  </body>
+</html>
