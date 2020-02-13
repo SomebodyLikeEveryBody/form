@@ -1,4 +1,4 @@
-﻿var quizzes = {
+var quizzes = {
   0: {
     context:
       "M. Rhododendron, 75 ans, est hospitalisé dans votre service. Vous le voyez afin d'entretenir ses capacités locomotrices et jouer favorablement sur son pronostic. Vous prévoyez de le faire travailler en chambre, puis de le faire marcher dans le couloir.",
@@ -689,7 +689,6 @@
     }
   },
 
-
   6: {
     context:
       "M. Padbol, 47 ans, est hospitalisé dans votre service. Vous le voyez pour des séances de kinésithérapie respiratoire en vue de prévenir les complications liées à une opération abdominale. Il est légèrement encombré et un diagnostic de tuberculose a été posé. La précaution complémentaire Air a été mise en place. Vous le voyez en chambre seule.",
@@ -1034,7 +1033,6 @@
       }
     }
   },
-
 
   9: {
     context:
@@ -1498,237 +1496,6 @@
   },
 
   13: {
-    context:
-      "M. Rognons, 58 ans, est hospitalisé dans votre service. Vous le voyez en kinésithérapie respiratoire en vue de prévenir les complications liées à une opération abdominale. Par ailleurs un diagnostic d'infection au clostridium difficile a été posé, les précautions complémentaires contact ont été mises en place en conséquence. Il n'est pas encombré et ne présente pas de symptômes respiratoires antérieurs à l'opération.",
-
-    responses: {
-      patient_MCQ_SHA: {
-        value: true,
-        explanation:
-          "Ce sont les précautions standard et complémentaires contact.\nLe SHA doit être appliqué par le patient avant et après tout contact avec des éléments extérieurs et régulièrement dans la journée.\nIl ne faut pas hésiter à le lui rappeler."
-      },
-
-      patient_MCQ_soap: {
-        value: true,
-        explanation:
-          "Ce sont les précautions standard et complémentaires contact.\nIci le savon est indiqué compte tenu de la présence de CLOSTRIDIUM DIFFICILE.\n\nOn peut rappeler les indications de l'utilisation de savon par le patient (cas de souillure, après un éternuement, cas de clostridium difficile, Gale, Hépatite A ou E, Salmonellose, Shigellose, et bien entendu à l'arrivée dans le service, au départ du service, après être passé aux toilettes, après s'être mouché, avant un repas ou une prise de boisson, et bien entendu à l'arrivée dans le service, au départ du service, après être passé aux toilettes, après s'être mouché, avant un repas ou une prise de boisson), le fait d'utiliser du savon quand cela n'est pas nécessaire augmente le risque d'irritations cutanées (à la différence du SHA) et est donc contre-productif."
-      },
-
-      patient_MCQ_glove_vinyle: {
-        value: false,
-        explanation:
-          "Ce sont les précautions standard et complémentaires contact.\nLe port de gants par le patient n'est pas indiqué ici."
-      },
-
-      patient_MCQ_surblouse_white: {
-        value: false,
-        explanation:
-          "Ce sont les précautions standard et complémentaires contact.\nLe port de surblouse par le patient ne s'applique pas ici. On peut rappeler les indications du port de surblouse par le patient (patient à qui s'appliquent les précautions complémentaires protectrices de risque ÉLEVÉ et qui se retrouve en milieu partagé)."
-      },
-
-      patient_MCQ_surblouse_green: {
-        value: false,
-        explanation:
-          "Ce sont les précautions standard et complémentaires contact.\nLe port de surblouse par le patient ne s'applique pas ici. On peut rappeler les indications du port de surblouse par le patient (patient à qui s'appliquent les précautions complémentaires protectrices de risque ÉLEVÉ et qui se retrouve en milieu partagé)."
-      },
-
-      patient_MCQ_standard_mask: {
-        value: false,
-        explanation:
-          "Ce sont les précautions standard et complémentaires contact.\nLe masque chirurgical n'est pas indiqué ici. On peut rappeller les indications du port du masque chirurgical par le patient (patient présentant des symptômes respiratoires et se retrouvant en milieu partagé).\n\nOn recommande de mettre le masque chirurgical dès sa sortie de son contenant, après la désinfection des mains aux SHA, de correctement le positionner (recouvrant NEZ, BOUCHE et MENTON) et de ne plus le toucher avant la fin du soin. A la fin du soin, de le retirer PUIS de désinfecter les mains au SHA, le masque étant potentiellement contaminant.\n\nEnfin il faut savoir que le fait de toucher la partie filtrante du masque chirurgical détériore les fibres et diminue très fortement son efficacité. C'est pourquoi il ne doit être touché QUE lors de la mise ET lors du retrait sous peine de perdre une grande part de son efficacité."
-      },
-
-      patient_MCQ_ffp1_mask: {
-        value: false,
-        explanation:
-          "Ce sont les précautions standard et complémentaires contact.\nLe port de l'Appareil de Protection Respiratoire FFP1 n'est pas indiqué ici."
-      },
-
-      patient_MCQ_ffp2_mask: {
-        value: false,
-        explanation:
-          "Ce sont les précautions standard et complémentaires contact.\nLe port de l'Appareil de Protection Respiratoire FFP2 n'est pas indiqué ici (patient à qui s'appliquent les précautions complémentaires protectrices de risque intermédiaire OU élevé et qui se retrouve en milieu partagé, présence de travaux)."
-      },
-
-      pract_MCQ_SHA: {
-        value: true,
-        explanation:
-          "Ce sont les précautions standard et complémentaires contact.\nLe SHA doit être appliqué par le professionnel avant ET après tout coutact avec le patient OU son environnement, et notamment après tout port de gants."
-      },
-
-      pract_MCQ_soap: {
-        value: true,
-        explanation:
-          "Ce sont les précautions standard et complémentaires contact.\nIci le savon est indiqué compte tenu de la présence de CLOSTRIDIUM DIFFICILE et qu'on ENTRE EN CONTACT AVEC LE PATIENT OU SON ENVIRONNEMENT.\n\nOn peut rappeler les indications d'utilisation du savon neutre par le professionnel (cas de souillure, après un éternuement, cas de clostridium difficile, Gale, Hépatite A ou E, Salmonellose, Shigellose, et bien entendu à l'arrivée dans le service, au départ du service, après être passé aux toilettes, après s'être mouché, avant un repas ou une prise de boisson).\n\nLe fait d'utiliser du savon quand cela n'est pas nécessaire augmente le risque d'irritations cutanées (à la différence du SHA) et est donc contre-productif."
-      },
-
-      pract_MCQ_glove_vinyle: {
-        value: true,
-        explanation:
-          "Ce sont les précautions standard et complémentaires contact.\nIci le port de gants en vinyle par le professionnel est préconisé compte tenu de la présence de CLOSTRIDIUM DIFFICILE et du fait que l'on ENTRE EN CONTACT AVEC LE PATIENT OU SON ENVIRONNEMENT. On peut rappeler les indications du port de gants en vinyle par le professionnel (risque de contact avec un produit biologique ou nocif, de contact avec des lésions ou des muqueuses, de piqûre, lésion cutanée du soignant).\n\nOn recommande de changer de gants entre chaque patient, et lors d'un soin chez un même patient en passant d'un site contaminé à un autre ou si le gant est souillé ou perforé.\n\nRemarque: les gants en vinyle coûtent moins cher que ceux en latex, eux-même moins chers que ceux en nitrile. Ils sont indiqués en première intention. En revanche il ne sont pas adaptés aux gestes fins (aspirations naso-pharyngée, ...) ni à la protection contre les cytostatiques (patient sous traitement chimiothérapique)."
-      },
-
-      pract_MCQ_glove_latex_nitrile: {
-        value: false,
-        explanation:
-          "Ce sont les précautions standard et complémentaires contact.\nLe port de gants en latex ou nitrile par le professionnel n'est pas préconisé ici (aspiration naso-pharyngée ou autre geste fin, protection des cytostatiques face à un patient sous traitement chimiothérapique).\n\nOn recommande de changer de gants entre chaque patient, et lors d'un soin chez un même patient en passant d'un site contaminé à un autre ou si le gant est souillé ou perforé.\n\nRemarque: les gants en nitrile coûtent plus cher que ceux en latex, eux-même plus chers que ceux en vinyle. Dans le cas où les gants en vinyle sont contre-indiqués, on préconisera en premier lieu les gants en latex SAUF SI intolérance au latex par le patient ou le praticien. Enfin, à la différence des gants en vinyle, ceux-ci sont indiqués pour la réalisation de gestes fins et la protection contre les cytostatiques."
-      },
-
-      pract_MCQ_standard_mask: {
-        value: false,
-        explanation:
-          "Ce sont les précautions standard et complémentaires contact.\nLe port du masque chirurgical n'est pas indiqué ici (professionnel présentant des symptômes respiratoires, risque d'aerosolisation de produits biologiques, infectieux ou nocifs, précautions complémentaires gouttelette, précautions complémentaires protectrices de risque élevé).\nCEPENDANT l'odeur dans la chambre compte tenu de l'infection au clostridium difficile peut être inconfortable pour le professionnel et c'est pourquoi il peut être intéressant d'utiliser un masque chirurgical. Mais ce sera pour des raisons de confort et non de recommandations liées à l'hygiène.\n\nOn recommande de mettre le masque chirurgical dès sa sortie de son contenant, après la désinfection des mains aux SHA, de correctement le positionner (recouvrant NEZ, BOUCHE et MENTON) et de ne plus le toucher avant la fin du soin. A la fin du soin, de le retirer PUIS de désinfecter les mains au SHA, le masque étant potentiellement contaminant.\n\nEnfin il faut savoir que le fait de toucher la partie filtrante du masque chirurgical détériore les fibres et diminue très fortement son efficacité. C'est pourquoi il ne doit être touché QUE lors de la mise ET lors du retrait sous peine de perdre une grande part de son efficacité."
-      },
-
-      pract_MCQ_ffp1_mask: {
-        value: false,
-        explanation:
-          "Ce sont les précautions standard et complémentaires contact.\nLe port de l'Appareil de Protection Respiratoire FFP1 n'est pas indiqué ici (tuberculose sensible aux traitements anti-tuberculeux, pathologie hautement infectieuse, précautions complémentaires air).\n\nOn recommande de mettre le masque dès sa sortie de son contenant, après la désinfection des mains aux SHA, de correctement le positionner et de ne plus le toucher avant la fin du soin. A la fin du soin, de le retirer PUIS de désinfecter les mains au SHA, le masque étant potentiellement contaminant.\n\nEnfin il faut savoir que le fait de toucher la partie filtrante du masque détériore les fibres et diminue très fortement son efficacité. C'est pourquoi il ne doit être touché QUE lors de la mise ET lors du retrait sous peine de perdre une grande part de son efficacité."
-      },
-
-      pract_MCQ_ffp2_mask: {
-        value: false,
-        explanation:
-          "Ce sont les précautions standard et complémentaires contact.\nLe port de l'Appareil de Protection Respiratoire FFP2 n'est pas indiqué ici (tuberculose multi-résistante aux anti-tuberculeux, pathologie hautement infectieuse, patient sous traitement chimiothérapique, précautions complémentaires air spécifique).\n\nOn recommande de mettre le masque dès sa sortie de son contenant, après la désinfection des mains aux SHA, de correctement le positionner et de ne plus le toucher avant la fin du soin. A la fin du soin, de le retirer PUIS de désinfecter les mains au SHA, le masque étant potentiellement contaminant.\n\nEnfin il faut savoir que le fait de toucher la partie filtrante du masque détériore les fibres et diminue très fortement son efficacité. C'est pourquoi il ne doit être touché QUE lors de la mise ET lors du retrait sous peine de perdre une grande part de son efficacité."
-      },
-
-      pract_MCQ_protection_glasses: {
-        value: false,
-        explanation:
-          "Ce sont les précautions standard et complémentaires contact.\nLe port de lunettes de protection n'est pas indiqué ici (risque d'éclaboussure ou de projection de produit biologique ou nocif)."
-      },
-
-      pract_MCQ_apron: {
-        value: false,
-        explanation:
-          "Ce sont les précautions standard et complémentaires contact.\nLe port d'un tablier imperméable blanc n'est pas indiqué ici (soin potentiellement souillant ou mouillant, risque de projection ou d'aerosolisation de produit biologique ou nocif).\n\nRemarque: les tabliers destinés aux soignants sont de couleur blanche tandis que ceux destinés aux ASH sont bleus."
-      },
-
-      pract_MCQ_surblouse_green: {
-        value: true,
-        explanation:
-          "Ce sont les précautions standard et complémentaires contact.\nIci le port d'une surblouse verte (déperlante) ou blanche (déperlante et imperméable), encore appelés \"blouse de protection hydrophobes non stériles à manches longues\" est indiqué, compte tenu de la présence de CLOSTRIDIUM DIFFICILE et du contact avec le patient et son ENVIRONNEMENT. La surblouse verte est déperlante mais perméable, donc en cas de risque de soin mouillant ou souillant ou avec un risque de projection, on préfèrera utiliser une sublouse BLANCHE ou bien une surblouse verte avec un tablier de protection par dessus. On peut rappeler les indications de port d'une surblouse par le professionnel (soin potentiellement souillant ou mouillant avec un risque de projection ou d'aerosolisation de produit biologique ou nocif plus important que pour le port du tablier, ou dont les conséquences sont plus graves, précautions complémentaires spécifiques d'agents alcoolo-résistants comme le clostridium difficile ou la gale)."
-      }
-    }
-  },
-
-  14: {
-    context:
-      "M. Neuville, 68 ans, est hospitalisé dans votre service. Vous le voyez en kinésithérapie respiratoire en vue de prévenir les complications liées à une opération abdominale. Par ailleurs un diagnostic d'infection au clostridium difficile a été posé, les précautions complémentaires contact ont été mises en place en conséquence. Il est encombré et ses sécretions sont purulentes.",
-
-    responses: {
-      patient_MCQ_SHA: {
-        value: true,
-        explanation:
-          "Ce sont les précautions standard et complémentaires contact.\nLe SHA doit être appliqué par le patient avant et après tout contact avec des éléments extérieurs et régulièrement dans la journée.\nIl ne faut pas hésiter à le lui rappeler."
-      },
-
-      patient_MCQ_soap: {
-        value: true,
-        explanation:
-          "Ce sont les précautions standard et complémentaires contact.\nIci le savon est indiqué compte tenu de la présence de CLOSTRIDIUM DIFFICILE.\n\nOn peut rappeler les indications de l'utilisation de savon par le patient (cas de souillure, après un éternuement, cas de clostridium difficile, Gale, Hépatite A ou E, Salmonellose, Shigellose, et bien entendu à l'arrivée dans le service, au départ du service, après être passé aux toilettes, après s'être mouché, avant un repas ou une prise de boisson, et bien entendu à l'arrivée dans le service, au départ du service, après être passé aux toilettes, après s'être mouché, avant un repas ou une prise de boisson), le fait d'utiliser du savon quand cela n'est pas nécessaire augmente le risque d'irritations cutanées (à la différence du SHA) et est donc contre-productif."
-      },
-
-      patient_MCQ_glove_vinyle: {
-        value: false,
-        explanation:
-          "Ce sont les précautions standard et complémentaires contact.\nLe port de gants par le patient n'est pas indiqué ici."
-      },
-
-      patient_MCQ_surblouse_white: {
-        value: false,
-        explanation:
-          "Ce sont les précautions standard et complémentaires contact.\nLe port de surblouse par le patient ne s'applique pas ici. On peut rappeler les indications du port de surblouse par le patient (patient à qui s'appliquent les précautions complémentaires protectrices de risque ÉLEVÉ et qui se retrouve en milieu partagé)."
-      },
-
-      patient_MCQ_surblouse_green: {
-        value: false,
-        explanation:
-          "Ce sont les précautions standard et complémentaires contact.\nLe port de surblouse par le patient ne s'applique pas ici. On peut rappeler les indications du port de surblouse par le patient (patient à qui s'appliquent les précautions complémentaires protectrices de risque ÉLEVÉ et qui se retrouve en milieu partagé)."
-      },
-
-      patient_MCQ_standard_mask: {
-        value: false,
-        explanation:
-          "Ce sont les précautions standard et complémentaires contact.\nLe patient présente des symptômes respiratoires mais reste dans la chambre le temps du soin. Il ne se trouve donc pas en milieu partagé donc le port du masque chirurgical n'est pas indiqué ici."
-      },
-
-      patient_MCQ_ffp1_mask: {
-        value: false,
-        explanation:
-          "Ce sont les précautions standard et complémentaires contact.\nLe port de l'Appareil de Protection Respiratoire FFP1 n'est pas indiqué ici."
-      },
-
-      patient_MCQ_ffp2_mask: {
-        value: false,
-        explanation:
-          "Ce sont les précautions standard et complémentaires contact.\nLe port de l'Appareil de Protection Respiratoire FFP2 n'est pas indiqué ici (patient à qui s'appliquent les précautions complémentaires protectrices de risque intermédiaire OU élevé et qui se retrouve en milieu partagé, présence de travaux)."
-      },
-
-      pract_MCQ_SHA: {
-        value: true,
-        explanation:
-          "Ce sont les précautions standard et complémentaires contact.\nLe SHA doit être appliqué par le professionnel avant ET après tout coutact avec le patient OU son environnement, et notamment après tout port de gants."
-      },
-
-      pract_MCQ_soap: {
-        value: true,
-        explanation:
-          "Ce sont les précautions standard et complémentaires contact.\nIci le savon est indiqué compte tenu de la présence de CLOSTRIDIUM DIFFICILE et qu'on ENTRE EN CONTACT AVEC LE PATIENT OU SON ENVIRONNEMENT.\n\nOn peut rappeler les indications d'utilisation de savon neutre par le professionnel (cas de souillure, après un éternuement, cas de clostridium difficile, Gale, Hépatite A ou E, Salmonellose, Shigellose, et bien entendu à l'arrivée dans le service, au départ du service, après être passé aux toilettes, après s'être mouché, avant un repas ou une prise de boisson).\n\nLe fait d'utiliser du savon quand cela n'est pas nécessaire augmente le risque d'irritations cutanées (à la différence du SHA) et est donc contre-productif."
-      },
-
-      pract_MCQ_glove_vinyle: {
-        value: true,
-        explanation:
-          "Ce sont les précautions standard et complémentaires contact.\nIci le port de gants en vinyle par le professionnel est préconisé compte tenu de la présence de CLOSTRIDIUM DIFFICILE et du fait que l'on ENTRE EN CONTACT AVEC LE PATIENT OU SON ENVIRONNEMENT. On peut rappeler les indications du port de gants en vinyle par le professionnel (risque de contact avec un produit biologique ou nocif, de contact avec des lésions ou des muqueuses, de piqûre, lésion cutanée du soignant).\n\nOn recommande de changer de gants entre chaque patient, et lors d'un soin chez un même patient en passant d'un site contaminé à un autre ou si le gant est souillé ou perforé.\n\nRemarque: les gants en vinyle coûtent moins cher que ceux en latex, eux-même moins chers que ceux en nitrile. Ils sont indiqués en première intention. En revanche il ne sont pas adaptés aux gestes fins (aspirations naso-pharyngée, ...) ni à la protection contre les cytostatiques (patient sous traitement chimiothérapique)."
-      },
-
-      pract_MCQ_glove_latex_nitrile: {
-        value: false,
-        explanation:
-          "Ce sont les précautions standard et complémentaires contact.\nLe port de gants en latex ou nitrile par le professionnel n'est pas préconisé ici (aspiration naso-pharyngée ou autre geste fin, protection des cytostatiques face à un patient sous traitement chimiothérapique).\n\nOn recommande de changer de gants entre chaque patient, et lors d'un soin chez un même patient en passant d'un site contaminé à un autre ou si le gant est souillé ou perforé.\n\nRemarque: les gants en nitrile coûtent plus cher que ceux en latex, eux-même plus chers que ceux en vinyle. Dans le cas où les gants en vinyle sont contre-indiqués, on préconisera en premier lieu les gants en latex SAUF SI intolérance au latex par le patient ou le praticien. Enfin, à la différence des gants en vinyle, ceux-ci sont indiqués pour la réalisation de gestes fins et la protection contre les cytostatiques."
-      },
-
-      pract_MCQ_standard_mask: {
-        value: true,
-        explanation:
-          "Ce sont les précautions standard et complémentaires contact.\nIci le port du masque chirurgical est indiqué compte tenu du fait que le patient présente des symptômes respiratoires. On peut rappeler les indications du port du masque chirurgical par le professionnel (professionnel présentant des symptômes respiratoires, risque d'aerosolisation de produits biologiques, infectieux ou nocifs, précautions complémentaires gouttelette, précautions complémentaires protectrices de risque élevé).\nCEPENDANT l'odeur dans la chambre compte tenu de l'infection au clostridium difficile peut être inconfortable pour le professionnel et c'est pourquoi il peut être intéressant d'utiliser un masque chirurgical. Mais ce sera pour des raisons de confort et non de recommandations liées à l'hygiène.\n\nOn recommande de mettre le masque chirurgical dès sa sortie de son contenant, après la désinfection des mains aux SHA, de correctement le positionner (recouvrant NEZ, BOUCHE et MENTON) et de ne plus le toucher avant la fin du soin. A la fin du soin, de le retirer PUIS de désinfecter les mains au SHA, le masque étant potentiellement contaminant.\n\nEnfin il faut savoir que le fait de toucher la partie filtrante du masque chirurgical détériore les fibres et diminue très fortement son efficacité. C'est pourquoi il ne doit être touché QUE lors de la mise ET lors du retrait sous peine de perdre une grande part de son efficacité."
-      },
-
-      pract_MCQ_ffp1_mask: {
-        value: false,
-        explanation:
-          "Ce sont les précautions standard et complémentaires contact.\nLe port de l'Appareil de Protection Respiratoire FFP1 n'est pas indiqué ici (tuberculose sensible aux traitements anti-tuberculeux, pathologie hautement infectieuse, précautions complémentaires air).\n\nOn recommande de mettre le masque dès sa sortie de son contenant, après la désinfection des mains aux SHA, de correctement le positionner et de ne plus le toucher avant la fin du soin. A la fin du soin, de le retirer PUIS de désinfecter les mains au SHA, le masque étant potentiellement contaminant.\n\nEnfin il faut savoir que le fait de toucher la partie filtrante du masque détériore les fibres et diminue très fortement son efficacité. C'est pourquoi il ne doit être touché QUE lors de la mise ET lors du retrait sous peine de perdre une grande part de son efficacité."
-      },
-
-      pract_MCQ_ffp2_mask: {
-        value: false,
-        explanation:
-          "Ce sont les précautions standard et complémentaires contact.\nLe port de l'Appareil de Protection Respiratoire FFP2 n'est pas indiqué ici (tuberculose multi-résistante aux anti-tuberculeux, pathologie hautement infectieuse, patient sous traitement chimiothérapique, précautions complémentaires air spécifique).\n\nOn recommande de mettre le masque dès sa sortie de son contenant, après la désinfection des mains aux SHA, de correctement le positionner et de ne plus le toucher avant la fin du soin. A la fin du soin, de le retirer PUIS de désinfecter les mains au SHA, le masque étant potentiellement contaminant.\n\nEnfin il faut savoir que le fait de toucher la partie filtrante du masque détériore les fibres et diminue très fortement son efficacité. C'est pourquoi il ne doit être touché QUE lors de la mise ET lors du retrait sous peine de perdre une grande part de son efficacité."
-      },
-
-      pract_MCQ_protection_glasses: {
-        value: true,
-        explanation:
-          "Ce sont les précautions standard et complémentaires contact.\nIci le port de lunettes de protection est indiqué du fait du risque de projection de produit biologique. On peut rappeler les indications du port de lunettes de protection par le professionnel (risque d'éclaboussure ou de projection de produit biologique ou nocif)."
-      },
-
-      pract_MCQ_apron: {
-        value: true,
-        explanation:
-          "Ce sont les précautions standard et complémentaires contact.\nIci le port d'un tablier imperméable blanc est indiqué du fait du risque d'aérosolisation de produit biologique.\n\nRemarque: Ici compte tenu des précautions standard dans la prise en charge d'un patient présentant des symptômes respiratoires, et des précautions complémentaires contact compte tenu d'un clostridium difficilé, il y a deux possibilités, SOIT utiliser UNIQUEMENT une surblouse blanche (déperlante et imperméable), SOIT utiliser une surblouse verte (déperlante uniquement) ainsi qu'un tablier de protection par dessus. \n\nOn peut rappeler les indication du port du tablier de protection par le professionnel (soin potentiellement souillant ou mouillant, risque de projection ou d'aerosolisation de produit biologique ou nocif).\n\nRemarque: les tabliers destinés aux soignants sont de couleur blanche tandis que ceux destinés aux ASH sont bleus."
-      },
-
-      pract_MCQ_surblouse_green: {
-        value: true,
-        explanation:
-          "Ce sont les précautions standard et complémentaires contact.\nIci le port d'une surblouse verte (déperlante) ou blanche (déperlante et imperméable), encore appelés \"blouse de protection hydrophobes non stériles à manches longues\" est indiqué, compte tenu de la présence de CLOSTRIDIUM DIFFICILE et du contact avec le patient et son ENVIRONNEMENT.\n\nLa surblouse verte est déperlante mais perméable, donc en cas de risque de soin mouillant ou souillant ou avec un risque de projection, comme c'est le cas ici, on préfèrera utiliser une surblouse BLANCHE ou bien une surblouse verte avec un tablier de protection par dessus. On peut rappeler les indications de port d'une surblouse par le professionnel (soin potentiellement souillant ou mouillant avec un risque de projection ou d'aerosolisation de produit biologique ou nocif plus important que pour le port du tablier, ou dont les conséquences sont plus graves, précautions complémentaires spécifiques d'agents alcoolo-résistants comme le clostridium difficile ou la gale)."
-      }
-    }
-  },
-
-
-  15: {
     context:
       "M. Propre, 55 ans, est hospitalisée dans votre service. Vous le voyez en kinésithérapie motrice en vue de prévenir les complications liées à une opération thoracique. Par ailleurs un diagnostic de gale  a été posé, les précautions complémentaires contact ont été mises en place en conséquence. Rien que d'y penser ça vous gratouille par-ci par-là.",
 
