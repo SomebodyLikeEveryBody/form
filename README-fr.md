@@ -3,7 +3,9 @@
 
 ![Screenshot](./imgReadMe/Example.png)
 
-**Si vous voulez l'essayer directement, cliquez ici !** --> https://somebodylikeeverybody.github.io/try_Hygi0Quizz/
+**Si vous voulez l'essayer directement, cliquez ici !** --> https://somebodylikeeverybody.github.io/form/src/Hygi0Quizz.htm
+
+
 
 ## I) Explications
 Le but de cette application est d'apprendre facilement les recommandations d'hygiène d'une structure de santé.  
